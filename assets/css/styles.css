@@ -572,9 +572,45 @@ img{
         height: 640px;
     }
  }
+@media screen and (max-width: 1080px) {
+  .menu_img {
+      max-width: 80%;
+      
+  }
+  .nav__logo{
+    margin-left: 50px;
+    position: fixed;
+  }
+}
 @media screen and (max-width: 721px) {
       .menu_img {
           max-width: 80%;
-          margin-right: 30%;
+          /* margin-right: 30%; */
       }
+      .nav__logo{
+        margin-left: 50px;
+        position: fixed;
+      }
+}
+@media screen and (max-width: 480px) {
+  .menu_img {
+      max-width: 80%;
+     margin-left: 10%;
+    
+  }
+  .nav__logo{
+    margin-left: 50px;
+    position: fixed;
+  }
+}
+@media screen and (max-width: 260px) {
+  .menu_img {
+      max-width: 80%;
+     margin-left: 10%;
+    
+  }
+  .nav__logo{
+    margin-left: 50px;
+    position: fixed;
+  }
 }
