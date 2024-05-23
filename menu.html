@@ -3,15 +3,11 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
         <!--========== BOX ICONS ==========-->
         <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
-
         <!--========== CSS ==========-->
         <link rel="stylesheet" href="assets/css/styles.css">
-    
         <link rel="shortcut icon" href="assets/img/fav.png" type="image/x-icon">
-        
         <title>Menu</title>
     </head>
     <body>
@@ -24,32 +20,126 @@
         <!--========== HEADER ==========-->
         <header class="l-header" id="header">
             <nav class="nav bd-container">
-                
+                <!-- Other existing elements -->
                 <a href="#" class="logo"><img src="assets/img/logo.png" alt=""></a>
                 <a href="index.html" class="nav__logo" id="logo">Monk's Table</a>
-
+        
                 <div class="nav__menu" id="nav-menu">
                     <ul class="nav__list">
+                        <!-- Other existing items -->
                         <li class="nav__item"><a href="index.html" class="nav__link active-link">Home</a></li>
                         <li class="nav__item"><a href="index.html" class="nav__link">About</a></li>
                         <li class="nav__item"><a href="index.html" class="nav__link">Services</a></li>
-                        <!-- <li class="nav__item"><a href="#menu" class="nav__link">Menu</a></li> -->
                         <li class="nav__item"><a href="#contact" class="nav__link">Contact us</a></li>
-
                         <li><i class='bx bx-moon change-theme' id="theme-button"></i></li>
                     </ul>
                 </div>
-
+        
                 <div class="nav__toggle" id="nav-toggle">
                     <i class='bx bx-menu'></i>
                 </div>
+        
+                <!-- Add cart icon with count -->
+                <div class="nav__cart">
+                    <i class='bx bx-cart'></i>
+                    <span id="cart-count" class="cart__count">0</span>
+                </div>
             </nav>
         </header>
+        
+        <!-- Modal Dialog -->
+        <div id="cart-modal" class="cart-modal">
+            <div class="cart-modal-content">
+                <span class="close-button" id="close-modal">&times;</span>
+                <h3>Item added to cart</h3>
+                <p id="tick"><img src="assets/img/Tick.png" alt="" style="max-width: 10%;"></p>
+                <p>Procced to Checkout !!</p>
 
+            </div>
+        </div>
+        
+        
         <main class="l-main">
             <!--========== HOME ==========-->
-            <h1 class="home__title" style="margin-top:5%;text-align: center;">Menu</h1>
-            <div class="menu_img"><img src="assets/img/menu1.png" alt="menu" style="margin-top:1%;margin-left: 30%;position: relative; max-width: 60%;"></div>
+            <section class="menu section bd-container" id="menu">
+                <h2 class="section-title">Menu</h2>
+
+                <div class="menu__container bd-grid">
+                    <div class="menu__content">
+                        <img src="assets/img/plate4.png" alt="" class="menu__img">
+                        <h3 class="menu__name">Edamame Nirvana</h3>
+                        <span class="menu__detail">Best Seller</span>
+                        <span class="menu__preci">₹220/-</span>
+                        <a href="#" class="button menu__button"><i class='bx bx-cart-alt'></i></a>
+                    </div>
+
+                    <div class="menu__content">
+                        <img src="assets/img/plate5.png" alt="" class="menu__img">
+                        <h3 class="menu__name">Crispy Lotus Chips</h3>
+                        <span class="menu__detail">Best Seller</span>
+                        <span class="menu__preci">₹150/-</span>
+                        <a href="#" class="button menu__button"><i class='bx bx-cart-alt'></i></a>
+                    </div>
+                    
+                    <div class="menu__content">
+                        <img src="assets/img/plate3.png" alt="" class="menu__img">
+                        <h3 class="menu__name">Karma Kale Salad</h3>
+                        <span class="menu__detail">Delicious dish</span>
+                        <span class="menu__preci">₹200/-</span>
+                        <a href="#" class="button menu__button"><i class='bx bx-cart-alt'></i></a>
+                    </div>
+                    <div class="menu__content">
+                        <img src="assets/img/plate1.png" alt="" class="menu__img">
+                        <h3 class="menu__name">Barbecue Salad</h3>
+                        <span class="menu__detail">Delicious dish</span>
+                        <span class="menu__preci">₹250/-</span>
+                        <a href="#" class="button menu__button"><i class='bx bx-cart-alt'></i></a>
+                    </div>
+                    <div class="menu__content">
+                        <img src="assets/img/plate6.png" alt="" class="menu__img">
+                        <h3 class="menu__name">Sattvic Quinoa Bowl</h3>
+                        <span class="menu__detail">Delicious dish</span>
+                        <span class="menu__preci">₹220/-</span>
+                        <a href="#" class="button menu__button"><i class='bx bx-cart-alt'></i></a>
+                    </div>
+                    <div class="menu__content">
+                        <img src="assets/img/plate7.png" alt="" class="menu__img">
+                        <h3 class="menu__name">Zen Zucchini Lasagna</h3>
+                        <span class="menu__detail">Delicious dish</span>
+                        <span class="menu__preci">₹350/-</span>
+                        <a href="#" class="button menu__button"><i class='bx bx-cart-alt'></i></a>
+                    </div>
+                    <div class="menu__content">
+                        <img src="assets/img/plate2.png" alt="" class="menu__img">
+                        <h3 class="menu__name">Buddha's Bowl</h3>
+                        <span class="menu__detail">Delicious dish</span>
+                        <span class="menu__preci">₹400/-</span>
+                        <a href="#" class="button menu__button"><i class='bx bx-cart-alt'></i></a>
+                    </div>
+                    <div class="menu__content">
+                        <img src="assets/img/plate8.png" alt="" class="menu__img">
+                        <h3 class="menu__name">Enlightened Mango Sorbet</h3>
+                        <span class="menu__detail">Delicious dish</span>
+                        <span class="menu__preci">₹180/-</span>
+                        <a href="#" class="button menu__button"><i class='bx bx-cart-alt'></i></a>
+                    </div>
+                    <div class="menu__content">
+                        <img src="assets/img/plate9.png" alt="" class="menu__img">
+                        <h3 class="menu__name">Choco Karma Cake</h3>
+                        <span class="menu__detail">Delicious dish</span>
+                        <span class="menu__preci">₹250/-</span>
+                        <a href="#" class="button menu__button"><i class='bx bx-cart-alt'></i></a>
+                    </div>
+                </div>
+            </section>
+
+
+            
+            <!-- <h1 class="home__title" style="margin-top:5%;text-align: center;">Menu</h1> -->
+            <!-- <div class="menu_img"><img src="assets/img/menu1.png" alt="menu" style="margin-top:1%;margin-left: 30%;position: relative; max-width: 60%;"></div> -->
+            
+            
+            
             <!--===== APP =======-->
             <section class="app section bd-container">
                 <div class="app__container bd-grid">

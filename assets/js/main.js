@@ -97,6 +97,43 @@ const sr = ScrollReveal({
     reset: true
 });
 
+document.addEventListener('DOMContentLoaded', function () {
+    const cartCountElement = document.getElementById('cart-count');
+    const modal = document.getElementById('cart-modal');
+    const closeModal = document.getElementById('close-modal');
+    let cartCount = 0;
+
+    // Handle add to cart button click
+    const buttons = document.querySelectorAll('.menu__button');
+    buttons.forEach(button => {
+        button.addEventListener('click', function (event) {
+            event.preventDefault();
+            cartCount++;
+            cartCountElement.textContent = cartCount;
+            showModal();
+        });
+    });
+
+    // Show modal
+    function showModal() {
+        modal.style.display = 'block';
+        setTimeout(() => {
+            modal.style.display = 'none';
+        }, 2000);
+    }
+
+    // Close modal when close button is clicked
+    closeModal.addEventListener('click', function () {
+        modal.style.display = 'none';
+    });
+
+    // Close modal when clicking outside of the modal content
+    window.addEventListener('click', function (event) {
+        if (event.target === modal) {
+            modal.style.display = 'none';
+        }
+    });
+});
 sr.reveal(`.home__data, .home__img,
             .about__data, .about__img,
             .services__content, .menu__content,
